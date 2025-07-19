@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+        <div class="container" id="welcome">
+            <h2>Bienvenue, <span id="userName"></span></h2>
+            <button id="logoutBtn">Déconnexion</button>
+        </div>
+        <div class="container" id="ajout">
+            <h3 class="ajouter">Ajouter un produit</h3>
+            <form id="productForm" class="ajouter">
+                <input type="text" id="productName" placeholder="Nom du produit" required>
+                <input type="number" id="productPrice" placeholder="Prix" required>
+                <input type="number" id="QtPrice" placeholder="Quantite" required>
+                <button type="submit">Ajouter</button>
+            </form>
+        </div>
+        
+        <div  class="container" class = "listeProduit" id="liste">
+            <h3 class = "listeProduit">Liste des produits</h3>
+            <input type="text" class = "listeProduit" id="searchInput" placeholder="Rechercher un produit...">
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prix (GNF)</th>
+                        <th>Quantite</th>
+                        <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="productList"></tbody>
+            </table>
+        </div>
+
+    <script src="../js/product.js"></script>
+</body>
+</html>
